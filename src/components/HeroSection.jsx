@@ -35,14 +35,14 @@ export default function HeroSection() {
       setSearchUniversities([]);
     } finally {
       setLoading(false);
-      setHasSearched(true)
+      setHasSearched(true);
     }
   };
- 
+
   return (
     <>
-      <section className="relative h-[80vh] flex flex-col items-center justify-center text-white px-4 overflow-hidden">
-        <div className="absolute inset-0 -z-10">
+      <section className="relative flex flex-col items-center justify-center text-white px-4 py-10 md:py-24 overflow-hidden">
+        <div className=" ">
           <Image
             src="/images/university.png"
             alt="University Background"

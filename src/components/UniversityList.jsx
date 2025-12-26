@@ -56,7 +56,7 @@ export default function UniversityList() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="w-full md:w-1/4 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 h-fit sticky top-6 z-20"
+          className="w-full md:w-1/4 bg-white p-6 rounded-2xl shadow-lg border border-gray-100 h-fit md:sticky md:top-6 md:z-20"
         >
           <div className=" ">
             <h3 className="text-xl font-bold mb-6 text-gray-800">

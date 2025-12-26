@@ -5,7 +5,7 @@
 ---
 
 ## 🔗 Live Demo
- [Live Website URL]()
+ [Live Website URL](https://admission-bridge-web.vercel.app/)
 
 ---
 
