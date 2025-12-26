@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import ApplyModal from "./ApplyModal";
 
 export default function UniversityCard({ isNotEligible, uni, onSelect, isSelected }) {
+  const [showApply, setShowApply] = useState(false);
+
   return (
     <div className="relative bg-white border border-gray-100 rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
       {isNotEligible && (
@@ -39,9 +42,21 @@ export default function UniversityCard({ isNotEligible, uni, onSelect, isSelecte
         <span className="text-sm text-gray-500 italic">Select to compare</span>
       </div>
 
-      <button className="w-full mt-5 bg-gray-900 text-white font-semibold py-3 rounded-xl hover:bg-blue-600 transition-colors">
+      <button
+        disabled={isNotEligible}
+        onClick={() => setShowApply(true)}
+        className={`w-full py-3 rounded-xl font-bold transition-all ${
+          isNotEligible
+            ? "bg-gray-200 text-gray-400 cursor-not-allowed"
+            : "bg-blue-600 text-white hover:bg-blue-700"
+        }`}
+      >
         Apply Now
       </button>
+
+      {showApply && (
+        <ApplyModal uni={uni} onClose={() => setShowApply(false)} />
+      )}
     </div>
   );
 }
